@@ -4,20 +4,20 @@
 
 Group project. The deadline is Wednesday, 30 January, until the end of the day, so that other groups can still check your code. If you can not deliver everything on time, you have to show what you have and then, after a while, continue and deliver the rest. In groups of 3-4 people, expand the student database design with the following requirements:
 
--    [] Storage of employees' records with the structure: Name, surname, social security, sex, address, earnings.
--    [] Storing student records with the structure: Name, surname, PESEL, gender, address, index number.
--    [] All people, regardless of whether they are employees or students, are to be kept in one container.
--    [] Search by name
--    [] Search by PESEL number
--    [] Displaying the entire database
--    [] Sorting by earnings
--    [] Sorting by PESEL
--    [] Sort by name
--    [] Filling the database with artificial data (data generation)
--    [] Loading from a file and saving the whole database in a file
--    [] Deleting by PESEL number
--    [] Modification of earnings and address by PESEL number
--    [] Validation or PESEL number is correct Wiki - validity of PESEL
+-    [ ] Storage of employees' records with the structure: Name, surname, social security, sex, address, earnings.
+-    [ ] Storing student records with the structure: Name, surname, PESEL, gender, address, index number.
+-    [ ] All people, regardless of whether they are employees or students, are to be kept in one container.
+-    [ ] Search by name
+-    [ ] Search by PESEL number
+-    [ ] Displaying the entire database
+-    [ ] Sorting by earnings
+-    [ ] Sorting by PESEL
+-    [ ] Sort by name
+-    [ ] Filling the database with artificial data (data generation)
+-    [ ] Loading from a file and saving the whole database in a file
+-    [ ] Deleting by PESEL number
+-    [ ] Modification of earnings and address by PESEL number
+-    [ ] Validation or PESEL number is correct Wiki - validity of PESEL
 
 NOTE: Pay attention to the formatting of the code. It should be uniform. In particular, do not make tabs instead of spaces, because this is immediately visible on GitHub. If you get stuck or you want to check compliance with the requirements, check the Checklist
 
@@ -26,18 +26,18 @@ Checking group projects for other groups - mandatory feedback (issued Issues on 
 ### WHAT WE HAVE UNTIL NOW:
 #### TO DO
 
- -   [] Class Person
- -   [] Class Employee inheriting from the Person class
- -   [] Class Student inheriting from the Person class 
- -   [] vector Persons in Database class 
- -   [] search method using a surname 
- -   [] search method using a PESEL
- -   [] method showing the entire database
- -   [] sorting method after earnings
- -   [] sorting method after PESEL 
- -   [] sorting method after surname 
- -   [] method of filling the entire database
- -   [] methods that allow you to handle files
- -   [] method erase after PESEL 
- -   [] method for modifying earnings and address after PESEL
- -   [] method of validating PESEL 
+ -   [ ] Class Person
+ -   [ ] Class Employee inheriting from the Person class
+ -   [ ] Class Student inheriting from the Person class 
+ -   [ ] vector Persons in Database class 
+ -   [ ] search method using a surname 
+ -   [ ] search method using a PESEL
+ -   [ ] method showing the entire database
+ -   [ ] sorting method after earnings
+ -   [ ] sorting method after PESEL 
+ -   [ ] sorting method after surname 
+ -   [ ] method of filling the entire database
+ -   [ ] methods that allow you to handle files
+ -   [ ] method erase after PESEL 
+ -   [ ] method for modifying earnings and address after PESEL
+ -   [ ] method of validating PESEL 

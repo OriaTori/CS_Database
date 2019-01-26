@@ -3,18 +3,18 @@
                                                                                                                        
 using namespace std;                                                                                                
                                                                                                                        
-class Student : public Person
+class Employee : public Person
 {                                                                                     
-    public:                                                                                                         
-        Student(const string name,                                                                                  
+    public:
+        Employee(const string name,
                 const string lastName,                                                                              
                 const int pesel,                                                                                    
                 const Gender gender,                                                                                
                 const string address,                                                                               
-                const int index);                                                                                   
+                const int salary);                                                                                   
                                                                                                                        
-        int getIndex() const;                                                                                       
+        int getSalary() const;                                                                                       
                                                                                                                        
     private:                                                                                                        
-        int index_;                                                                                                 
+        int salary_;                                                                                                 
 }; 

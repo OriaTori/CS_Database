@@ -4,7 +4,7 @@
  
  Person::Person(const string name,
                 const string lastName,
-                const pesel,
+                const int pesel,
                 const Gender gender,
                 const string address)
      : name_(name)
@@ -26,7 +26,7 @@
  
  int Person::getPesel() const
  {
-     return pesel_'
+     return pesel_;
  }
  
  Gender Person::getGender() const

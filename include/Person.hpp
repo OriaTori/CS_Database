@@ -24,7 +24,7 @@
       string getLastName() const;
       int getPesel() const;
       Gender getGender() const;
-      string getAddres() const;
+      string getAddress() const;
       void setAddress(const string newAddress);
  
   protected:

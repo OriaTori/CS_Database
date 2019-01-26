@@ -1,0 +1,11 @@
+os: linux
+language: cpp
+compiler:
+    - clang++
+    - g++
+before_script:
+    - mkdir build
+    - cd build
+    - cmake ..
+    - make
+script: ./database

@@ -1,5 +1,7 @@
 #include "../include/Person.hpp"
- 
+#include <iomanip>
+#include <sstream>
+
  using namespace std;
  
  Person::Person(const string name,
@@ -43,3 +45,14 @@
  {
      address_ = newAddress;
  }
+
+string Person::getPersonDetails() const
+{
+    stringstream ss;
+    ss << name_ << setw(6);
+    ss << lastName_ << setw(6);
+    ss << to_string(pesel_) << setw(6);
+    ss << static_cast<char>(gender_) << setw(6);
+    ss << address_ << "\n";
+    return ss.str();
+}

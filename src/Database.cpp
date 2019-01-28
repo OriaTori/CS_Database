@@ -26,6 +26,13 @@ void Database::sortByName()
             });
 }
 
+void Database::sortByPesel()
+ {
+     std::sort(peopleBase_.begin(), peopleBase_.end(),
+             [](Person* lh, Person* rh){
+             return lh->getPesel() < rh->getPesel();
+             });
+ }
 void Database::saveToFile(std::string filename) const
 {
 }

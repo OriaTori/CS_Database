@@ -1,4 +1,5 @@
 #include "../include/Database.hpp"
+#include <algorithm>
 
 NotFound::NotFound(const std::string& message)
     : std::out_of_range(message)
@@ -16,6 +17,13 @@ void Database::showBase() const
     for (const auto& person : peopleBase_) {
         std::cout << person->getPersonDetails();
     }
+}
+void Database::sortByName()
+{
+    std::sort(peopleBase_.begin(), peopleBase_.end(),
+            [](Person* lh, Person* rh){
+            return lh->getLastName() < rh->getLastName();
+            });
 }
 
 void Database::saveToFile(std::string filename) const

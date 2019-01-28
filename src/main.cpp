@@ -18,8 +18,11 @@ int main()
                             "SomeStreet someCity",
                            5000);
     Database db;
-    db.addPerson(john);
     db.addPerson(ben);
+    db.addPerson(john);
+    db.showBase();
+    db.sortByName();
+    std::cout<<" \t---\n";
     db.showBase();
     delete john;
     delete ben;

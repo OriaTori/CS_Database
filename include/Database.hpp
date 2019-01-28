@@ -15,6 +15,7 @@ class Database {
 public:
     void addPerson(Person* person);
     void showBase() const;
+    void sortByName();
     void saveToFile(std::string filename) const;
     void loadFromFile(std::string filename);
 

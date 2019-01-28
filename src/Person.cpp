@@ -1,12 +1,12 @@
 #include "../include/Person.hpp"
- 
- using namespace std;
- 
- Person::Person(const string name,
-                const string lastName,
-                const int pesel,
+#include <iomanip>
+#include <sstream>
+
+ Person::Person(const std::string name,
+                const std::string lastName,
+                const unsigned long int pesel,
                 const Gender gender,
-                const string address)
+                const std::string address)
      : name_(name)
      , lastName_(lastName)
      , pesel_(pesel)
@@ -14,17 +14,17 @@
      , address_(address)
      {}
  
- string Person::getName() const
+std::string Person::getName() const
  {
      return name_;
  }
  
- string Person::getLastName() const
+std::string Person::getLastName() const
  {
      return lastName_;
  }
  
- int Person::getPesel() const
+ unsigned long int Person::getPesel() const
  {
      return pesel_;
  }
@@ -34,12 +34,23 @@
      return gender_;
  }
  
- string Person::getAddress() const
+std::string Person::getAddress() const
  {
      return address_;
  }
  
- void Person::setAddress(const string newAddress)
+ void Person::setAddress(const std::string newAddress)
  {
      address_ = newAddress;
  }
+
+std::string Person::getPersonDetails() const
+{
+    std::stringstream ss;
+    ss << std::setw(20) << name_ ;
+    ss << std::setw(20) << lastName_ ;
+    ss << std::setw(12) << std::to_string(pesel_);
+    ss << std::setw(1)  << static_cast<char>(gender_);
+    ss << std::setw(30) << address_ ;
+    return ss.str();
+}

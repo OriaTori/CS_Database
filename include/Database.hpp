@@ -16,6 +16,7 @@ public:
     void addPerson(Person* person);
     void showBase() const;
     void sortByName();
+    void sortByPesel();
     void saveToFile(std::string filename) const;
     void loadFromFile(std::string filename);
 

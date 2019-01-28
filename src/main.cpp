@@ -22,6 +22,7 @@ int main()
     db.addPerson(john);
     db.showBase();
     db.sortByName();
+    db.sortByPesel();
     std::cout<<" \t---\n";
     db.showBase();
     delete john;

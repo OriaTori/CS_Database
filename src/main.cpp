@@ -25,6 +25,7 @@ int main()
     db.sortByPesel();
     std::cout<<" \t---\n";
     db.showBase();
+    db.saveToFile("base.txt");
     delete john;
     delete ben;
     return 0;

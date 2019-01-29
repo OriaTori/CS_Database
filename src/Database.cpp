@@ -1,5 +1,6 @@
 #include "../include/Database.hpp"
 #include <algorithm>
+#include <fstream>
 
 NotFound::NotFound(const std::string& message)
     : std::out_of_range(message)
@@ -35,6 +36,15 @@ void Database::sortByPesel()
  }
 void Database::saveToFile(std::string filename) const
 {
+    std::ofstream file(filename, std::ios::out);
+    if(file.is_open())
+    {
+        for(auto it : peopleBase_)
+        {
+            file << it->getPersonDetails();
+        }
+    }
+    file.close();
 }
 
 void Database::loadFromFile(std::string filename)

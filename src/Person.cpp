@@ -47,10 +47,14 @@ std::string Person::getAddress() const
 std::string Person::getPersonDetails() const
 {
     std::stringstream ss;
-    ss << std::setw(20) << name_ ;
-    ss << std::setw(20) << lastName_ ;
-    ss << std::setw(12) << std::to_string(pesel_);
-    ss << std::setw(1)  << static_cast<char>(gender_);
-    ss << std::setw(30) << address_ ;
+    ss << std::setw(20) << name_ << ";";
+    ss << std::setw(20) << lastName_ << ";" ;
+    ss << std::setw(12) << std::to_string(pesel_) << ";";
+    ss << std::setw(1)  << static_cast<char>(gender_) << ";";
+    ss << std::setw(30) << address_ << ";" ;
     return ss.str();
+}
+unsigned long int Person::getSalary() const
+{
+    return 0;
 }

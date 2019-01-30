@@ -23,7 +23,7 @@ public:
     std::string getAddress() const;
     void setAddress(const std::string newAddress);
     virtual std::string getPersonDetails() const;
-
+    virtual unsigned long int getSalary() const;
 private:
     std::string name_;
     std::string lastName_;

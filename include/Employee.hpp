@@ -1,5 +1,6 @@
 #pragma once
 #include "../include/Person.hpp"
+#include <vector>
 
 class Employee : public Person {
 public:
@@ -10,6 +11,7 @@ public:
         const std::string address,
         const unsigned long int salary);
 
+    Employee(std::vector<std::string>);
     unsigned long int getSalary() const;
     std::string getPersonDetails() const override;
 

@@ -1,5 +1,6 @@
 #pragma once
 #include "../include/Person.hpp"
+#include <vector>
 
 class Student : public Person {
 public:
@@ -10,6 +11,7 @@ public:
         const std::string address,
         const unsigned long int index);
 
+    Student(std::vector<std::string> data);
     unsigned long int getIndex() const;
     std::string getPersonDetails() const override;
 

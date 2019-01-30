@@ -19,6 +19,7 @@ public:
     void sortByPesel();
     void saveToFile(std::string filename) const;
     void loadFromFile(std::string filename);
+    Person* findByPesel(unsigned long int index);
 
 private:
     PeopleBase peopleBase_;

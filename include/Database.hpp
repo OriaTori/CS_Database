@@ -19,6 +19,7 @@ public:
     void showBase() const;
     void sortByName();
     void sortByPesel();
+    void sortBySalary();
     void saveToFile(std::string filename) const;
     void loadFromFile(std::string filename);
     std::vector<std::string> changeString(std::string line);

@@ -54,3 +54,7 @@ std::string Person::getPersonDetails() const
     ss << std::setw(30) << address_ << ";" ;
     return ss.str();
 }
+unsigned long int Person::getSalary() const
+{
+    return 0;
+}

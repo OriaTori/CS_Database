@@ -34,6 +34,12 @@ void Database::sortByPesel()
              return lh->getPesel() < rh->getPesel();
              });
  }
+
+void Database::sortBySalary()
+{
+    
+}
+
 void Database::saveToFile(std::string filename) const
 {
     std::ofstream file(filename, std::ios::out);

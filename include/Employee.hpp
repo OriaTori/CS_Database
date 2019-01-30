@@ -12,7 +12,7 @@ public:
         const unsigned long int salary);
 
     Employee(std::vector<std::string>);
-    unsigned long int getSalary() const;
+    unsigned long int getSalary() const override;
     std::string getPersonDetails() const override;
 
 private:

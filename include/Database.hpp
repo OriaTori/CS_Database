@@ -1,5 +1,7 @@
 #pragma once
 #include "../include/Person.hpp"
+#include "../include/Student.hpp"
+#include "../include/Employee.hpp"
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -19,6 +21,8 @@ public:
     void sortByPesel();
     void saveToFile(std::string filename) const;
     void loadFromFile(std::string filename);
+    std::vector<std::string> changeString(std::string line);
+    void createPersonIn(std::vector<std::string> data);
 
 private:
     PeopleBase peopleBase_;

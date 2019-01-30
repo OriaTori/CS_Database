@@ -26,6 +26,9 @@ int main()
     std::cout<<" \t---\n";
     db.showBase();
     db.saveToFile("base.txt");
+    std::cout << "\t After loading from file: \t \n";
+    db.loadFromFile("base.txt");
+    db.showBase();
     delete john;
     delete ben;
     return 0;

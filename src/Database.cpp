@@ -40,3 +40,9 @@ void Database::saveToFile(std::string filename) const
 void Database::loadFromFile(std::string filename)
 {
 }
+
+Person* Database::findByPesel( unsigned long int index)
+{
+	return std::find(peopleBase_.begin(), peopleBase_.end(), 
+		[index](Person* person){return person->getPesel()==index;});
+}

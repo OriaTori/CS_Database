@@ -21,11 +21,12 @@ public:
     void sortByPesel();
     void sortBySalary();
     Person* findByPesel(unsigned long int index);
+    Person* findByLastName(std::string lastName);
     void saveToFile(std::string filename) const;
     void loadFromFile(std::string filename);
     std::vector<std::string> changeString(std::string line);
     void createPersonIn(std::vector<std::string> data);
-
+    void deleteByPesel(unsigned long int pesel);
 
 private:
     PeopleBase peopleBase_;

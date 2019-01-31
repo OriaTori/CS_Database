@@ -43,6 +43,30 @@ void Database::sortBySalary()
             });
 }
 
+Person* Database::findByPesel( unsigned long int index)
+{
+	auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(), 
+		[index](auto person){return person->getPesel()==index;});
+	if (found != peopleBase_.end())
+	{
+		return *found;
+	}
+	else
+	{
+		return nullptr;
+	}
+}
+Person* Database::findByLastName(std::string lastName)
+{
+    auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(),
+            [lastName](auto person){return person->getLastName() == lastName;});
+    if(found != peopleBase_.end())
+    {
+        return *found;
+    }
+    throw NotFound("This person is not in database.");
+}
+
 void Database::saveToFile(std::string filename) const
 {
     std::ofstream file(filename, std::ios::out | std::ios_base::app);
@@ -59,7 +83,6 @@ void Database::saveToFile(std::string filename) const
 void Database::loadFromFile(std::string filename)
 {
     std::ifstream file(filename, std::ios_base::in);
-   // file.seekg(0);
     if(file.is_open())
     {
         std::string line;
@@ -103,17 +126,13 @@ void Database::createPersonIn(std::vector<std::string> data)
         }
     }
 }
-
-Person* Database::findByPesel( unsigned long int index)
+void Database::deleteByPesel(unsigned long int pesel)
 {
-	auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(), 
-		[index](auto person){return person->getPesel()==index;});
-	if (found != peopleBase_.end())
-	{
-		return *found;
-	}
-	else
-	{
-		return nullptr;
-	}
+    //Add pesel validation
+    if(this->findByPesel(pesel) != nullptr)
+    {
+        auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(),       
+                [pesel](auto person){return person->getPesel()==pesel;});
+        peopleBase_.erase(found);
+    }
 }

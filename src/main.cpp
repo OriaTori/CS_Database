@@ -42,11 +42,22 @@ int main()
     db.loadFromFile("database.txt");
     db.showBase();
     std::cout<<"Find By Pesel";
-	  Person* ptr= db.findByPesel(10987654321);
-	  std::cout << ptr->getPersonDetails();
-    db.showBase();
+	Person* ptr= db.findByPesel(10987654321);
+	if(ptr != nullptr)
+    std::cout << ptr->getPersonDetails();
+    
+    std::cout<<"Find By Name";
+	ptr= db.findByLastName("Johnson");
+	if(ptr != nullptr)
+    std::cout << ptr->getPersonDetails();
+
+    std::cout<< "After delete by pesel: 79102307123 \n ";
+    db.sortByPesel();
+    db.deleteByPesel(79102307123);
+    db.showBase(); 
 
     delete john;
     delete ben;
+    ptr = nullptr;
     return 0;
 }

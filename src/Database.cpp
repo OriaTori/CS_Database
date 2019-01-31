@@ -99,3 +99,17 @@ void Database::createPersonIn(std::vector<std::string> data)
         }
     }
 }
+
+Person* Database::findByPesel( unsigned long int index)
+{
+	auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(), 
+		[index](auto person){return person->getPesel()==index;});
+	if (found != peopleBase_.end())
+	{
+		return *found;
+	}
+	else
+	{
+		return nullptr;
+	}
+}

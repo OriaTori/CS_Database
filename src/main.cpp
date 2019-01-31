@@ -29,6 +29,9 @@ int main()
     std::cout << "\t After loading from file: \t \n";
     db.loadFromFile("base.txt");
     db.showBase();
+    std::cout<<"Find By Pesel";
+	  Person* ptr= db.findByPesel(10987654321);
+	  std::cout << ptr->getPersonDetails();
     delete john;
     delete ben;
     return 0;

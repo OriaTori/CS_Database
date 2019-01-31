@@ -41,11 +41,17 @@ int main()
     std::cout << "\t After loading from file: \t \n";
     db.loadFromFile("database.txt");
     db.showBase();
+<<<<<<< HEAD
+    
+    std::cout<<"After sort by salary:\n ";
+    db.sortBySalary();
+    db.showBase();
+
+=======
     std::cout<<"Find By Pesel";
 	  Person* ptr= db.findByPesel(10987654321);
 	  std::cout << ptr->getPersonDetails();
-    db.showBase();
-
+>>>>>>> 75a28a4d6bf9b0f54073eeef2c8dc5828e01290f
     delete john;
     delete ben;
     return 0;

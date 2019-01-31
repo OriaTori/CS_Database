@@ -20,10 +20,12 @@ public:
     void sortByName();
     void sortByPesel();
     void sortBySalary();
+    Person* findByPesel(unsigned long int index);
     void saveToFile(std::string filename) const;
     void loadFromFile(std::string filename);
     std::vector<std::string> changeString(std::string line);
     void createPersonIn(std::vector<std::string> data);
+
 
 private:
     PeopleBase peopleBase_;

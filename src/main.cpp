@@ -18,17 +18,34 @@ int main()
                             "SomeStreet someCity",
                            5000);
     Database db;
+    db.loadFromFile("base.txt");
+    std::cout<<"After loading:\n";
+    db.showBase();
+
     db.addPerson(ben);
     db.addPerson(john);
+    
+    std::cout<<"After adding 2 persons:\n";
     db.showBase();
+    
+    std::cout<<"After sort by name:\n";
     db.sortByName();
+    db.showBase();
+    
+    std::cout<<"After sort by PESEL:\n";
     db.sortByPesel();
-    std::cout<<" \t---\n";
     db.showBase();
-    db.saveToFile("base.txt");
+    
+    db.saveToFile("database.txt");
+
     std::cout << "\t After loading from file: \t \n";
-    db.loadFromFile("base.txt");
+    db.loadFromFile("database.txt");
     db.showBase();
+    
+    std::cout<<"After sort by salary:\n ";
+    db.sortBySalary();
+    db.showBase();
+
     delete john;
     delete ben;
     return 0;

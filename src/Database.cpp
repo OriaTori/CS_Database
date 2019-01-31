@@ -37,12 +37,15 @@ void Database::sortByPesel()
 
 void Database::sortBySalary()
 {
-    
+    std::sort(peopleBase_.begin(), peopleBase_.end(),
+            [](Person* lh, Person* rh){
+            return lh->getSalary() < rh->getSalary();
+            });
 }
 
 void Database::saveToFile(std::string filename) const
 {
-    std::ofstream file(filename, std::ios::out);
+    std::ofstream file(filename, std::ios::out | std::ios_base::app);
     if(file.is_open())
     {
         for(auto it : peopleBase_)
@@ -56,6 +59,7 @@ void Database::saveToFile(std::string filename) const
 void Database::loadFromFile(std::string filename)
 {
     std::ifstream file(filename, std::ios_base::in);
+   // file.seekg(0);
     if(file.is_open())
     {
         std::string line;
@@ -89,12 +93,12 @@ void Database::createPersonIn(std::vector<std::string> data)
     {
         if(data.back().find("INDEX:") != std::string::npos)
         {
-            Person* person = new Employee(data);
+            Person* person = new Student(data);
             addPerson(person);
         }
         else
         {
-            Person* person = new Student(data);
+            Person* person = new Employee(data);
             addPerson(person);
         }
     }

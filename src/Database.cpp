@@ -43,6 +43,14 @@ void Database::loadFromFile(std::string filename)
 
 Person* Database::findByPesel( unsigned long int index)
 {
-	return std::find(peopleBase_.begin(), peopleBase_.end(), 
-		[index](Person* person){return person->getPesel()==index;});
+	auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(), 
+		[index](auto person){return person->getPesel()==index;});
+	if (found != peopleBase_.end())
+	{
+		return *found;
+	}
+	else
+	{
+		return nullptr;
+	}
 }

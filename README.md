@@ -7,7 +7,7 @@ Group project. The deadline is Wednesday, 30 January, until the end of the day, 
 -    [x] Storage of employees' records with the structure: Name, surname, social security, sex, address, earnings.
 -    [x] Storing student records with the structure: Name, surname, PESEL, gender, address, index number.
 -    [x] All people, regardless of whether they are employees or students, are to be kept in one container.
--    [x] Search by name
+-    [ ] Search by name
 -    [x] Search by PESEL number
 -    [x] Displaying the entire database
 -    [x] Sorting by earnings
@@ -30,7 +30,7 @@ Checking group projects for other groups - mandatory feedback (issued Issues on 
  -   [x] Class Employee inheriting from the Person class
  -   [x] Class Student inheriting from the Person class 
  -   [x] vector Persons in Database class 
- -   [x] search method using a surname 
+ -   [ ] search method using a surname 
  -   [x] search method using a PESEL
  -   [x] method showing the entire database
  -   [x] sorting method after earnings

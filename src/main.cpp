@@ -25,6 +25,9 @@ int main()
     db.sortByPesel();
     std::cout<<" \t---\n";
     db.showBase();
+    std::cout<<"Find By Pesel";
+	Person* ptr= db.findByPesel(10987654321);
+	std::cout << ptr->getPersonDetails();
     delete john;
     delete ben;
     return 0;

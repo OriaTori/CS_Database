@@ -1,4 +1,3 @@
-#pragma once
 #include "../include/Person.hpp"
 #include <vector>
 

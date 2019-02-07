@@ -37,7 +37,11 @@ void Database::sortByPesel()
 
 void Database::sortBySalary()
 {
-    
+}    
+void Database::modifyAddress(const int pesel, const std::string newAddress)
+{
+    auto person = findByPesel(pesel);
+    person->setAddress(newAddress);
 }
 
 void Database::saveToFile(std::string filename) const

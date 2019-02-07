@@ -32,6 +32,10 @@ int main()
     std::cout<<"Find By Pesel";
 	  Person* ptr= db.findByPesel(10987654321);
 	  std::cout << ptr->getPersonDetails();
+
+    db.modifyAddress(87112345697, "Grabiszynska 9, 53-501 Wrocław");
+    db.showBase();
+
     delete john;
     delete ben;
     return 0;

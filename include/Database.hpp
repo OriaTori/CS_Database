@@ -25,7 +25,7 @@ public:
     void loadFromFile(std::string filename);
     std::vector<std::string> changeString(std::string line);
     void createPersonIn(std::vector<std::string> data);
-
+    void modifyAddress(const int pesel, const std::string newAddress);
 
 private:
     PeopleBase peopleBase_;

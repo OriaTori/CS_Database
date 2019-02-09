@@ -37,12 +37,39 @@ void Database::sortByPesel()
 
 void Database::sortBySalary()
 {
-    
+    std::sort(peopleBase_.begin(), peopleBase_.end(),
+            [](Person* lh, Person* rh){
+            return lh->getSalary() < rh->getSalary();
+            });
+}
+
+Person* Database::findByPesel( unsigned long int index)
+{
+	auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(), 
+		[index](auto person){return person->getPesel()==index;});
+	if (found != peopleBase_.end())
+	{
+		return *found;
+	}
+	else
+	{
+		return nullptr;
+	}
+}
+Person* Database::findByLastName(std::string lastName)
+{
+    auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(),
+            [lastName](auto person){return person->getLastName() == lastName;});
+    if(found != peopleBase_.end())
+    {
+        return *found;
+    }
+    throw NotFound("This person is not in database.");
 }
 
 void Database::saveToFile(std::string filename) const
 {
-    std::ofstream file(filename, std::ios::out);
+    std::ofstream file(filename, std::ios::out | std::ios_base::app);
     if(file.is_open())
     {
         for(auto it : peopleBase_)
@@ -89,27 +116,23 @@ void Database::createPersonIn(std::vector<std::string> data)
     {
         if(data.back().find("INDEX:") != std::string::npos)
         {
-            Person* person = new Employee(data);
+            Person* person = new Student(data);
             addPerson(person);
         }
         else
         {
-            Person* person = new Student(data);
+            Person* person = new Employee(data);
             addPerson(person);
         }
     }
 }
-
-Person* Database::findByPesel( unsigned long int index)
+void Database::deleteByPesel(unsigned long int pesel)
 {
-	auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(), 
-		[index](auto person){return person->getPesel()==index;});
-	if (found != peopleBase_.end())
-	{
-		return *found;
-	}
-	else
-	{
-		return nullptr;
-	}
+    //Add pesel validation
+    if(this->findByPesel(pesel) != nullptr)
+    {
+        auto found = std::find_if(peopleBase_.begin(), peopleBase_.end(),       
+                [pesel](auto person){return person->getPesel()==pesel;});
+        peopleBase_.erase(found);
+    }
 }

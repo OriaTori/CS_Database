@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/31f7177e96a34555842059fced23cbfc)](https://app.codacy.com/app/OriaTori/CS_Database?utm_source=github.com&utm_medium=referral&utm_content=OriaTori/CS_Database&utm_campaign=Badge_Grade_Dashboard)
 # Coders School Database project [![Build Status](https://travis-ci.com/OriaTori/CS_Database.svg?branch=master)](https://travis-ci.com/OriaTori/CS_Database)
 
 ### TASKS OF THE PROJECT:

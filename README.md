@@ -1,4 +1,4 @@
-# Coders School Database project [![Build Status](https://travis-ci.com/OriaTori/CS_Database.svg?branch=master)](https://travis-ci.com/OriaTori/CS_Database) [![codecov](https://codecov.io/gh/OriaTori/CS_Database/branch/master/graph/badge.svg)](https://codecov.io/gh/OriaTori/CS_Database)
+# Coders School Database project [![Build Status](https://travis-ci.com/OriaTori/CS_Database.svg?branch=master)](https://travis-ci.com/OriaTori/CS_Database) [![codecov](https://codecov.io/gh/OriaTori/CS_Database/branch/master/graph/badge.svg)](https://codecov.io/gh/OriaTori/CS_Database) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b572df14043944d9b6d2b8c05e6da6b9)](https://www.codacy.com/app/OriaTori/CS_Database?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OriaTori/CS_Database&amp;utm_campaign=Badge_Grade)
 
 
 ### TASKS OF THE PROJECT:

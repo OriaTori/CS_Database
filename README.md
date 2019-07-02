@@ -1,4 +1,5 @@
-# Coders School Database project [![Build Status](https://travis-ci.com/OriaTori/CS_Database.svg?branch=master)](https://travis-ci.com/OriaTori/CS_Database)
+# Coders School Database project [![Build Status](https://travis-ci.com/OriaTori/CS_Database.svg?branch=master)](https://travis-ci.com/OriaTori/CS_Database) [![codecov](https://codecov.io/gh/OriaTori/CS_Database/branch/master/graph/badge.svg)](https://codecov.io/gh/OriaTori/CS_Database)
+
 
 ### TASKS OF THE PROJECT:
 
